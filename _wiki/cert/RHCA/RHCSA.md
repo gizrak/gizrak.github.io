@@ -1,5 +1,5 @@
 ---
-title: RH200
+title: RHCSA
 category:
   - 자격증
 hidden: true
