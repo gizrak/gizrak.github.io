@@ -9,6 +9,7 @@ category:
 아래 모든 과정을 수료할 경우 취득하게 되는 Red Hat의 사실상 끝판대장 자격증
 
 ## 교육 과정 및 자격 시험
+
 |코드명|과정|자격 시험|비고|
 |----|---|-------|---|
 |[RH200](/wiki/cert/RHCA/RHCSA)|RHCSA Rapid Track Course with Exam|EX200||
@@ -20,6 +21,7 @@ category:
 |RH442|Red Hat Enterprise Performance Tuning|EX442|EX300 필수|
 
 ## 취득 자격증
+
 |자격명|자격명 전체|자격 조건|
 |----|--------|-------|
 |[RHCSA](/wiki/cert/RHCA/RHCSA)|Red Hat Certified System Administrator|EX200|
