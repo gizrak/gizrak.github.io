@@ -11,6 +11,7 @@ gem "liquid", ">= 4.0.4"
 gem "jekyll", "~> 3.5"
 gem "kramdown-parser-gfm"
 gem "minimal-mistakes-jekyll"
+gem "jekyll-remote-theme"
 
 group :jekyll_plugins do
   gem "jekyll-admin"
