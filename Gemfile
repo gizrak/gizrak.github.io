@@ -16,8 +16,11 @@ gem "jekyll-remote-theme"
 group :jekyll_plugins do
   gem "jekyll-admin"
   gem "jekyll-feed"
+  gem "jekyll-gist"
   gem "jekyll-include-cache"
+  gem "jekyll-paginate"
   gem "jekyll-sass-converter"
+  gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
   gem "jekyll-toc"
 end
