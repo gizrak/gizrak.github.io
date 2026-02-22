@@ -1,17 +1,4 @@
-# gizrak.github.io
-
-Personal blog (Jekyll + [Minimal Mistakes](https://mmistakes.github.io/minimal-mistakes/)).
-
-## 로컬에서 실행하기
-
-- **Ruby 4.x** 권장. **Bundler**: `gem install bundler`
-- 클론 후:
-  ```bash
-  bundle install
-  bundle exec jekyll serve
-  ```
-- 브라우저에서 **http://localhost:4000** 접속.  
-- _config.yml 수정 시에는 서버 재시작.
+This is fork branch of jekyll-now for my personal blog.
 
 ## GitHub Pages 배포
 
