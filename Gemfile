@@ -1,18 +1,23 @@
 source "https://rubygems.org"
 
-gem "github-pages", group: :jekyll_plugins
-
-gem "jekyll", "~> 3.5"
+# Jekyll 4 + Ruby 4 compatible stack (no github-pages to allow newer deps)
+gem "jekyll", "~> 4.4"
+gem "liquid", ">= 4.0.4"
 gem "minimal-mistakes-jekyll"
+gem "jekyll-remote-theme"
+gem "jekyll-include-cache"
+gem "jekyll-feed"
+gem "jekyll-sitemap"
+gem "jekyll-paginate"
+gem "jekyll-seo-tag"
+gem "jekyll-gist"
+gem "jekyll-toc"
 
-group :jekyll_plugins do
-  gem "jekyll-admin"
-  gem 'jekyll-feed'
-  gem 'jekyll-include-cache'
-  gem 'jekyll-sitemap'
-  gem "jekyll-toc"
-end
+# Ruby 3.4+ removed from default gems
+gem "webrick"
+gem "csv"
+gem "bigdecimal"
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo'
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
+# Windows
+gem "tzinfo"
+gem "tzinfo-data", platforms: [:mingw, :mswin, :x64_mingw]

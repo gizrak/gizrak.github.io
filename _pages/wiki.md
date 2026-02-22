@@ -1,26 +1,8 @@
 ---
-layout: default
+layout: single
 title: "Wiki"
 permalink: /wiki/
 author_profile: true
 ---
 
-<div id="main" role="main">
-  {% include sidebar.html %}
-
-  <div class="archive">
-    {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title">{{ page.title }}</h1>
-    {% endunless %}
-    
-    {% assign groups = site.wiki | group_by: "category" | sort: "name" %}
-    {% for group in groups %}
-        <h3>{{ group.name | remove: '["' | remove: '"]' }}</h3>
-        {% for item in group.items %}
-            {% if item.hidden != true %}
-                <a href="{{ item.url }}">{{ item.title }}</a>,&nbsp;
-            {% endif %}
-        {% endfor %}
-    {% endfor %}
-   </div>
-</div>
+이전 위키 문서는 현재 구조에서 제외되었습니다. 필요 시 별도 컬렉션으로 복원할 수 있습니다.
