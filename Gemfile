@@ -1,8 +1,9 @@
 source "https://rubygems.org"
 
-# Ruby 3.4+ 에서 기본 라이브러리에서 제거됨 (CI/로컬 Ruby 4 대응)
+# Ruby 3.0+ 에서 기본 라이브러리에서 제거됨 (CI/로컬 Ruby 4 대응)
 gem "csv"
 gem "bigdecimal"
+gem "webrick"
 
 gem "github-pages", group: :jekyll_plugins
 
