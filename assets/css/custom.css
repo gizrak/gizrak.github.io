@@ -43,3 +43,10 @@
   font-size: 0.8125rem !important;
   line-height: 1.5;
 }
+
+/* 이전/다음 페이지 버튼 글자 크기 (사이드바 bio 수준으로) */
+.pagination .pagination--pager,
+nav.pagination a.pagination--pager {
+  font-size: 0.75rem !important; /* 12px */
+  line-height: 1.5;
+}

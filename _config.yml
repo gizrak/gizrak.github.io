@@ -18,11 +18,13 @@ logo:
 masthead_title:
 words_per_minute: 200
 
-# Comments
+# Comments (Utterances: GitHub 이슈 기반, 무료, 스타일 제어 용이)
 comments:
-  provider: "disqus"
-  disqus:
-    shortname: "gizrak"
+  provider: "utterances"
+  utterances:
+    theme: "github-light"
+    issue_term: "pathname"
+    repo: "gizrak/gizrak.github.io"
 
 # Feed
 atom_feed:
