@@ -7,6 +7,9 @@ gem "webrick"
 
 gem "github-pages", group: :jekyll_plugins
 
+# Liquid 4.0.4+ (Ruby 3.2+에서 제거된 tainted? 호출 제거됨)
+gem "liquid", ">= 4.0.4"
+
 gem "jekyll", "~> 3.5"
 gem "minimal-mistakes-jekyll"
 
