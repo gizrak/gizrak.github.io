@@ -20,6 +20,19 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+<<<<<<< master
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '4.0'
+          bundler-cache: true
+
+      - name: Build with Jekyll
+        run: bundle exec jekyll build --future
+=======
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -53,3 +66,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+>>>>>>> main
