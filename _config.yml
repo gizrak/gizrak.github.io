@@ -1,118 +1,82 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your entire site, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# `jekyll serve`. If you change this file, please restart the server process.
+# Jekyll 4 + Minimal Mistakes (remote theme)
+# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
 
-# Theme Settings
-#
-# Review documentation to determine if you should use `theme` or `remote_theme`
-# https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/#installing-the-theme
+remote_theme: mmistakes/minimal-mistakes@4.27.3
+minimal_mistakes_skin: "default"
 
-# theme                  : "minimal-mistakes-jekyll"
-# remote_theme           : "mmistakes/minimal-mistakes"
-minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
+# Site
+locale: "ko-KR"
+title: "Try to Remember"
+title_separator: "-"
+name: "Ted Hwang"
+description: "Always with me"
+url: "https://gizrak.github.io"
+baseurl: ""
+repository: "gizrak/gizrak.github.io"
+teaser:
+logo:
+masthead_title:
+words_per_minute: 200
 
-# Site Settings
-locale                   : "ko-KR"
-title                    : "Try to Remember"
-title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Ted Hwang"
-description              : "Always with me"
-url                      : "https://gizrak.github.io"
-baseurl                  : # the subpath of your site, e.g. "/blog"
-repository               : "gizrak/gizrak.github.io"
-teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : # path of logo image to display in the masthead, e.g. "/assets/images/88x88.png"
-masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
-# breadcrumbs            : false # true, false (default)
-words_per_minute         : 200
+# Comments (Utterances: GitHub 이슈 기반, 무료, 스타일 제어 용이)
 comments:
-  provider               : "disqus" # false (default), "disqus", "discourse", "facebook", "staticman", "staticman_v2", "utterances", "custom"
-  disqus:
-    shortname            : "gizrak"
-  discourse:
-    server               : # https://meta.discourse.org/t/embedding-discourse-comments-via-javascript/31963 , e.g.: meta.discourse.org
-  facebook:
-    # https://developers.facebook.com/docs/plugins/comments
-    appid                :
-    num_posts            : # 5 (default)
-    colorscheme          : # "light" (default), "dark"
+  provider: "utterances"
   utterances:
-    theme                : # "github-light" (default), "github-dark"
-    issue_term           : # "pathname" (default)
-  staticman:
-    branch               : # "master"
-    endpoint             : # "https://{your Staticman v3 API}/v3/entry/github/"
-reCaptcha:
-  siteKey                :
-  secret                 :
+    theme: "github-light"
+    issue_term: "pathname"
+    repo: "gizrak/gizrak.github.io"
+
+# Feed
 atom_feed:
-  path                   : # blank (default) uses feed.xml
-search                   : true # true, false (default)
-search_full_content      : true # true, false (default)
-search_provider          : lunr # lunr (default), algolia, google
-algolia:
-  application_id         : # YOUR_APPLICATION_ID
-  index_name             : # YOUR_INDEX_NAME
-  search_only_api_key    : # YOUR_SEARCH_ONLY_API_KEY
-  powered_by             : # true (default), false
+  path:
+
+# Search
+search: true
+search_full_content: true
+search_provider: lunr
 google:
-  search_engine_id       : "013301330279346143463:bsln4ar6o_i" # YOUR_SEARCH_ENGINE_ID
-  instant_search         : # false (default), true
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-yandex_site_verification :
-naver_site_verification  :
+  search_engine_id: "013301330279346143463:bsln4ar6o_i"
+
+# SEO
+google_site_verification:
+bing_site_verification:
+yandex_site_verification:
+naver_site_verification:
 
 # Collections
-collections              :
-  portfolio              :
-    output               : true
-    permalink            : /:collection/:path/
-  wiki                   :
-    output               : true
+collections:
+  portfolio:
+    output: true
+    permalink: /:collection/:path/
+  notes:
+    output: true
+    permalink: /notes/:path/
 
-# Social Sharing
+# Social
 twitter:
-  username               :
+  username:
 facebook:
-  username               :
-  app_id                 :
-  publisher              :
-og_image                 : # Open Graph/Twitter default site image
-# For specifying social profiles
-# - https://developers.google.com/structured-data/customize/social-profiles
+  username:
+og_image:
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type:
+  name:
+  links:
 
 # Analytics
 analytics:
-  provider               : "google-gtag" # false (default), "google", "google-universal", "custom"
+  provider: "google-gtag"
   google:
-    tracking_id          : "UA-48627058-2"
-    anonymize_ip         : # true, false (default)
+    tracking_id: "UA-48627058-2"
+    anonymize_ip:
 
-
-# Site Author
+# Author
 author:
-  name             : "Ted Hwang"
-  avatar           : "/assets/images/ted-hwang.jpg"
-  bio              : "隨處作主 立處皆眞"
-  location         : "South Korea"
-  email            : "gizrak@me.com"
+  name: "Ted Hwang"
+  avatar: "/assets/images/ted-hwang.jpg"
+  bio: "🌱 매일 성장 중!"
+  email: "gizrak@me.com"
   links:
-    # - label: "Email"
-    #   icon: "fas fa-fw fa-envelope-square"
-    #   url: "gizrak@me.com"
-    - label: "Website"
-      icon: "fas fa-fw fa-link"
-      # url: "https://your-website.com"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: "https://twitter.com/gizrak"
@@ -129,76 +93,46 @@ author:
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/gizrak/"
 
-# Site Footer
+# Footer
 footer:
-  links:
-    - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      # url:
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook-square"
-      # url:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      # url:
-    - label: "GitLab"
-      icon: "fab fa-fw fa-gitlab"
-      # url:
-    - label: "Bitbucket"
-      icon: "fab fa-fw fa-bitbucket"
-      # url:
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      # url:
+  links: []
 
-
-# Reading Files
+# Files (Jekyll 4: include adds to default)
 include:
   - .htaccess
   - _pages
+
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
   - vendor
   - .asset-cache
   - .bundle
-  - .jekyll-assets-cache
+  - .jekyll-cache
   - .sass-cache
-  - assets/js/plugins
-  - assets/js/_main.js
-  - assets/js/vendor
-  - Capfile
-  - CHANGELOG
-  - config
   - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - log
+  - Gemfile.lock
   - node_modules
   - package.json
   - package-lock.json
-  - Rakefile
-  - README
+  - README.md
   - tmp
-  - /docs # ignore Minimal Mistakes /docs
-  - /test # ignore Minimal Mistakes /test
+  - /docs
+  - /test
+
 keep_files:
   - .git
   - .svn
+
 encoding: "utf-8"
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
 
 # Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
 excerpt_separator: "\n\n"
-incremental: false
 
-
-# Markdown Processing
+# Kramdown (Jekyll 4 uses kramdown 2.x)
 kramdown:
   input: GFM
   hard_wrap: false
@@ -207,81 +141,44 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
 
-
-# Sass/SCSS
+# Sass
 sass:
-  sass_dir: _sass
-  style: compressed # https://sass-lang.com/documentation/file.SASS_REFERENCE.html#output_style
+  style: compressed
 
-
-# Outputting
+# Output
 permalink: /:categories/:title/
-paginate: 10 # amount of posts to show
+paginate: 10
 paginate_path: /page:num/
-timezone: Asia/Seoul # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Asia/Seoul
 
-
-# Plugins (previously gems:)
+# Plugins (Jekyll 4: no whitelist)
 plugins:
-  - jekyll-admin
+  - jekyll-remote-theme
+  - jekyll-include-cache
   - jekyll-paginate
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
-  - jekyll-include-cache
+  - jekyll-seo-tag
   - jekyll-toc
 
-# mimic GitHub Pages with --safe
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jekyll-include-cache
-
-
 # Archives
-#  Type
-#  - GitHub Pages compatible archive pages built with Liquid ~> type: liquid (default)
-#  - Jekyll Archives plugin archive pages ~> type: jekyll-archives
-#  Path (examples)
-#  - Archive page should exist at path when using Liquid method or you can
-#    expect broken links (especially with breadcrumbs enabled)
-#  - <base_path>/tags/my-awesome-tag/index.html ~> path: /tags/
-#  - <base_path>/categories/my-awesome-category/index.html ~> path: /categories/
-#  - <base_path>/my-awesome-category/index.html ~> path: /
 category_archive:
   type: liquid
   path: /categories/
 tag_archive:
   type: liquid
   path: /tags/
-# https://github.com/jekyll/jekyll-archives
-# jekyll-archives:
-#   enabled:
-#     - categories
-#     - tags
-#   layouts:
-#     category: archive-taxonomy
-#     tag: archive-taxonomy
-#   permalinks:
-#     category: /categories/:name/
-#     tag: /tags/:name/
 
-
-# HTML Compression
-# - https://jch.penibelst.de/
+# HTML compression
 compress_html:
   clippings: all
   ignore:
     envs: development
 
-
 # Defaults
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -293,9 +190,7 @@ defaults:
       share: true
       related: true
       toc: true
-      toc_ads: true
       toc_sticky: true
-  # _portfolio
   - scope:
       path: ""
       type: portfolio
@@ -303,7 +198,6 @@ defaults:
       layout: single
       author_profile: false
       share: true
-  # _pages
   - scope:
       path: ""
       type: pages
@@ -314,13 +208,14 @@ defaults:
       comments: false
       share: true
       related: false
-  # _wiki
   - scope:
       path: ""
-      type: wiki
+      type: notes
     values:
-      layout: wiki
+      layout: single
       author_profile: true
+      read_time: false
+      comments: false
+      share: true
       toc: true
-      toc_ads: true
       toc_sticky: true
