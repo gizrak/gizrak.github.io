@@ -46,9 +46,9 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
-  wiki:
+  notes:
     output: true
-    permalink: /wiki/:path/
+    permalink: /notes/:path/
 
 # Social
 twitter:
@@ -208,7 +208,7 @@ defaults:
       related: false
   - scope:
       path: ""
-      type: wiki
+      type: notes
     values:
       layout: single
       author_profile: true

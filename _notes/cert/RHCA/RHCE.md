@@ -134,7 +134,7 @@ category:
 ### httpd
 
 1. 설치 및 설정 (데몬 재가동 & 부팅시 설정 포함)
-  - [Apache](/wiki/Apache) 항목 참조
+  - [Apache](/notes/Apache) 항목 참조
 1. selinux
     ~~~shell
     $ ls -ldZ /var/www/html 

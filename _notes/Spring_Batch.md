@@ -31,7 +31,7 @@ category:
 * `BATCH_STEP_EXECUTION_CONTEXT`
 
 ## Scope
-* [Bean](/wiki/Bean)의 생성 시점을 지정된 Scope가 실행되는 시점으로 지연
+* [Bean](/notes/Bean)의 생성 시점을 지정된 Scope가 실행되는 시점으로 지연
 * `@JobScope`: Step 선언문에서 사용
 * `@StepScope`: Tasklet이나 Reader/Processor/Writer에서 사용
 * 장점

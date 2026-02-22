@@ -10,7 +10,7 @@ main:
     url: /portfolio/
   #- title: "Sample Collections"
   #  url: /collection-archive/
-  - title: "Wiki"
-    url: /wiki/
+  - title: "Notes"
+    url: /notes/
   - title: "Sitemap"
     url: /sitemap/
