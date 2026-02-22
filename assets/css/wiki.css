@@ -1,0 +1,52 @@
+/* Wiki index: 다단 배치 + 좌측 패널과 맞춘 폰트 크기 */
+.wiki-index {
+  font-size: 0.8125rem; /* 13px, 사이드바와 비슷하게 */
+  line-height: 1.5;
+}
+
+.wiki-index__intro {
+  margin-bottom: 1rem;
+}
+
+.wiki-category {
+  break-inside: avoid;
+  margin-bottom: 1.25rem;
+}
+
+.wiki-category__title {
+  font-size: 0.9375rem; /* 15px */
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.wiki-category__list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0 0 0.5rem 0;
+  column-count: 3;
+  column-gap: 2rem;
+  column-fill: balance;
+}
+
+.wiki-category__list li {
+  margin-bottom: 0.25rem;
+  break-inside: avoid;
+}
+
+.wiki-category__list a {
+  font-size: inherit;
+}
+
+@media (max-width: 1024px) {
+  .wiki-category__list {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .wiki-category__list {
+    column-count: 1;
+  }
+}

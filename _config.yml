@@ -41,11 +41,14 @@ bing_site_verification:
 yandex_site_verification:
 naver_site_verification:
 
-# Collections (portfolio only; wiki removed)
+# Collections
 collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  wiki:
+    output: true
+    permalink: /wiki/:path/
 
 # Social
 twitter:
@@ -203,3 +206,14 @@ defaults:
       comments: false
       share: true
       related: false
+  - scope:
+      path: ""
+      type: wiki
+    values:
+      layout: single
+      author_profile: true
+      read_time: false
+      comments: false
+      share: true
+      toc: true
+      toc_sticky: true
