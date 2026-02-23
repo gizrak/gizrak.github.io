@@ -18,7 +18,7 @@ const BlogPostTemplate = ({ data }) => {
         title={post.frontmatter.title}
         description={post.excerpt}
       />
-      <article className={`blog-post${post.tableOfContents ? ` has-toc` : ``}`} itemScope itemType="http://schema.org/Article">
+      <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header className="post-header">
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <div className="post-meta">

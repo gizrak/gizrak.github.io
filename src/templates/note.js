@@ -11,7 +11,7 @@ const NoteTemplate = ({ data }) => {
   return (
     <Layout>
       <Seo title={note.frontmatter.title} />
-      <article className={`note-post${note.tableOfContents ? ` has-toc` : ``}`}>
+      <article className="note-post">
         <header className="post-header">
           <h1>{note.frontmatter.title}</h1>
           {categories.length > 0 && (

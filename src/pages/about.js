@@ -10,7 +10,7 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
-      <article className={`about-page${page.tableOfContents ? ` has-toc` : ``}`}>
+      <article className="about-page">
         <header className="post-header">
           <h1>{page.frontmatter.title}</h1>
         </header>

@@ -1,16 +1,15 @@
 .toc {
-  position: sticky;
-  top: 1.5rem;
-  float: right;
-  clear: right;
-  max-width: 260px;
-  margin-left: 2rem;
-  margin-bottom: 1.5rem;
+  position: fixed;
+  top: 6rem;
+  right: 1.5rem;
+  width: 260px;
+  max-width: calc(100vw - 2rem);
   padding: 0.75rem 1rem;
   border-left: 3px solid #ddd;
   font-size: 0.8125rem;
   line-height: 1.5;
   background: #fafafa;
+  z-index: 10;
 }
 
 .tocTitle {
@@ -42,9 +41,10 @@
 @media (max-width: 1024px) {
   .toc {
     position: relative;
-    float: none;
+    top: auto;
+    right: auto;
+    width: 100%;
     max-width: 100%;
-    margin-left: 0;
     margin-bottom: 1.5rem;
   }
 }
