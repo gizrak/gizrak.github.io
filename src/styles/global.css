@@ -247,6 +247,27 @@ img {
   font-style: italic;
 }
 
+/* Reserve space for floating TOC so content does not overlap */
+.blog-post.has-toc .post-header,
+.blog-post.has-toc .post-body,
+.note-post.has-toc .post-header,
+.note-post.has-toc .post-body,
+.about-page.has-toc .post-header,
+.about-page.has-toc .post-body {
+  margin-right: 300px;
+}
+
+@media (max-width: 1024px) {
+  .blog-post.has-toc .post-header,
+  .blog-post.has-toc .post-body,
+  .note-post.has-toc .post-header,
+  .note-post.has-toc .post-body,
+  .about-page.has-toc .post-header,
+  .about-page.has-toc .post-body {
+    margin-right: 0;
+  }
+}
+
 /* ========================================
    Post Navigation
    ======================================== */
