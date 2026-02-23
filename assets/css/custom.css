@@ -6,14 +6,6 @@
   margin-right: 0;
 }
 
-/* 본문 폰트를 좌측 패널 bio 크기에 맞춤 (about, blog, portfolio, notes) */
-#main .page__content,
-#main .archive {
-  font-size: 0.8125rem; /* 13px, 사이드바 bio와 비슷 */
-  line-height: 1.6;
-  letter-spacing: 0.01em;
-}
-
 #main .page__content h1,
 #main .archive h1 {
   font-size: 1.25rem;
@@ -63,12 +55,5 @@
 #main .archive table thead th,
 #main .archive table tbody td {
   font-size: 0.8125rem !important;
-  line-height: 1.5;
-}
-
-/* 이전/다음 페이지 버튼 글자 크기 (사이드바 bio 수준으로) */
-.pagination .pagination--pager,
-nav.pagination a.pagination--pager {
-  font-size: 0.75rem !important; /* 12px */
   line-height: 1.5;
 }
