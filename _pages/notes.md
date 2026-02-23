@@ -12,6 +12,7 @@ toc: false
 {% assign groups = site.notes | group_by: "category" | sort: "name" %}
 {% for group in groups %}
 {% assign cat_name = group.name | remove: '["' | remove: '"]' | strip %}
+
 <div class="notes-category">
 <h3 class="notes-category__title">{{ cat_name }}</h3>
 {% assign sorted = group.items | sort: "title" %}

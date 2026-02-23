@@ -3,13 +3,13 @@ layout: single
 title: "About"
 permalink: /about/
 toc: true
-toc_ads : true
+toc_ads: true
 toc_sticky: true
 last_modified_at: 2021-07-17T23:30:32+09:00
 ---
 
-- 경험이 없으면 노력을 한다. 경험이 쌓이는 만큼 노력은 요령으로 대체된다. 
-- 한쪽으로 치우치지 않고 밸런스를 유지하는 것은 어렵다. 
+- 경험이 없으면 노력을 한다. 경험이 쌓이는 만큼 노력은 요령으로 대체된다.
+- 한쪽으로 치우치지 않고 밸런스를 유지하는 것은 어렵다.
 - 항상 밸런스를 유지하고 기억하고 기록하는 습관을 가져야 한다.
 
 <a href="https://about.me/gizrak" class="btn btn--info">About Me</a>
