@@ -4,7 +4,7 @@ category:
   - Technology
 ---
 
-`Another Neat Tool`
+`Another Neat Tool` — Gradle처럼 Java/빌드 자동화를 위한 스크립트 도구이다.
 
 ## 특징
 1. make, Batch File, shell 스크립트등의 기능을 통합 한것이다.
