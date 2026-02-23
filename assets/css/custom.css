@@ -57,3 +57,31 @@
   font-size: 0.8125rem !important;
   line-height: 1.5;
 }
+
+/* 코드 블록 가로 스크롤 방지: 자동 줄바꿈 (테마 기본 pre 스타일 덮어씀) */
+#main .highlighter-rouge,
+#main .highlight,
+#main pre {
+  max-width: 100%;
+  overflow-x: visible;
+}
+#main .highlight pre,
+#main .highlight code,
+#main pre,
+#main pre code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
+#main .highlight table,
+#main .highlight td.code {
+  max-width: 100%;
+}
+#main .highlight td.code pre,
+#main .highlight td.code code {
+  white-space: pre-wrap !important;
+  word-wrap: break-word !important;
+  overflow-wrap: break-word !important;
+  word-break: break-word !important;
+}
