@@ -25,6 +25,10 @@ codekit-config.json
 _asset_bundler_cache
 _site
 
+# Gatsby generated files
+.cache
+public
+
 ### IntelliJ IDEA ###
 .idea
 *.iws

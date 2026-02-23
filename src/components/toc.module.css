@@ -1,0 +1,50 @@
+.toc {
+  position: sticky;
+  top: 1.5rem;
+  float: right;
+  clear: right;
+  max-width: 260px;
+  margin-left: 2rem;
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid #ddd;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  background: #fafafa;
+}
+
+.tocTitle {
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  font-size: 0.875rem;
+}
+
+.tocContent :global(ul) {
+  list-style: none;
+  padding-left: 0.75rem;
+  margin: 0;
+}
+
+.tocContent :global(li) {
+  margin: 0.2rem 0;
+}
+
+.tocContent :global(a) {
+  color: #555;
+  text-decoration: none;
+}
+
+.tocContent :global(a:hover) {
+  color: #000;
+  text-decoration: underline;
+}
+
+@media (max-width: 1024px) {
+  .toc {
+    position: relative;
+    float: none;
+    max-width: 100%;
+    margin-left: 0;
+    margin-bottom: 1.5rem;
+  }
+}
