@@ -159,7 +159,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `static/assets/images/ted-hwang.jpg`,
+        icon: `static/assets/images/icon.svg`,
       },
     },
   ],
