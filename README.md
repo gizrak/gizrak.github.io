@@ -1,9 +1,40 @@
-This is fork branch of jekyll-now for my personal blog.
+# Try to Remember
+
+Ted Hwang의 개인 블로그. Gatsby로 구축됩니다.
+
+## 로컬 개발
+
+```bash
+npm install
+npm run develop   # http://localhost:8000
+```
+
+## 빌드
+
+```bash
+npm run build
+npm run serve     # 빌드 결과 로컬 미리보기
+```
 
 ## GitHub Pages 배포
 
-- **배포가 사이트에 반영되지 않을 때**  
-  저장소 **Settings → Pages → Build and deployment** 에서 **Source**를 **"GitHub Actions"**로 선택하세요.  
-  `main` 푸시 시 `.github/workflows/jekyll.yml` 이 Gemfile 기준으로 Jekyll을 빌드하고 배포합니다.
+`main` 브랜치에 푸시하면 `.github/workflows/deploy.yml`이 자동으로 Gatsby를 빌드하고 배포합니다.
 
-- **"Deploy from a branch"** 로 두면 GitHub 쪽에서 제공하는 Jekyll만 사용해 빌드하므로, 저장소의 Gemfile/테마와 맞지 않으면 빌드 실패나 예전 빌드가 노출될 수 있습니다.
+저장소 **Settings → Pages → Build and deployment** 에서 **Source**를 **"GitHub Actions"**로 설정해야 합니다.
+
+## 구조
+
+```
+content/
+  posts/      # 블로그 포스트 (.md)
+  notes/      # 기술 레퍼런스 노트 (.md)
+  portfolio/  # 포트폴리오 항목 (.md)
+  pages/      # 정적 페이지 (about.md 등)
+static/
+  assets/     # 이미지 등 정적 파일
+src/
+  components/ # React 컴포넌트
+  templates/  # 페이지 템플릿
+  pages/      # 정적 페이지 (notes, portfolio 등)
+  styles/     # CSS
+```
