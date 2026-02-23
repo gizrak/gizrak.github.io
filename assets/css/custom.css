@@ -1,8 +1,17 @@
+/* tedcode-style: 단정한 본문 영역 (최대 너비·여백) */
+#main .page__content,
+#main .archive {
+  max-width: 52rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 /* 본문 폰트를 좌측 패널 bio 크기에 맞춤 (about, blog, portfolio, notes) */
 #main .page__content,
 #main .archive {
   font-size: 0.8125rem; /* 13px, 사이드바 bio와 비슷 */
-  line-height: 1.5;
+  line-height: 1.6;
+  letter-spacing: 0.01em;
 }
 
 #main .page__content h1,
@@ -27,6 +36,19 @@
 #main .archive h5,
 #main .archive h6 {
   font-size: 0.9375rem;
+}
+
+/* 제목 단정한 톤 (미니멀 가독성) */
+#main .page__content h1,
+#main .page__content h2,
+#main .page__content h3,
+#main .archive h1,
+#main .archive h2,
+#main .archive h3 {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
 }
 
 /* 표 안 글자는 본문과 동일한 크기 (테마 기본 표 스타일 덮어씀) */
