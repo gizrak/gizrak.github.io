@@ -28,6 +28,7 @@ gallery:
 {% include gallery caption="Baduk board game play screenshots" %}
 
 These are the major features.
+
 1. Access anywhere from PC or mobile web browser
 1. Place both black and white by myself and display the order
 1. Create user's own notation and save it

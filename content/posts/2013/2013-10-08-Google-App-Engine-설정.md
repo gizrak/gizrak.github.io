@@ -13,17 +13,17 @@ runtime: python
 api_version: 1
 
 handlers:
-- url: /html
-  static_dir: html
-  
-- url: /js
-  static_dir: js
-  
-- url: /style
-  static_dir: style
-  
-- url: /.*
-  script: cloudbook.py
+  - url: /html
+    static_dir: html
+
+  - url: /js
+    static_dir: js
+
+  - url: /style
+    static_dir: style
+
+  - url: /.*
+    script: cloudbook.py
 ```
 
 ## Data Store
@@ -50,20 +50,30 @@ NotImplementedError: Unable to find the Python PIL library. Please view the SDK 
 
 - Uninstall your PIL
 - Download the latest libjpeg from here: http://www.ijg.org/files/jpegsrc.v7.tar.gz
--
-        $ tar zxvf jpegsrc.v7.tar.gz
-        $ cd jpeg-7
-        $ ./configure --enable-shared --enable-static
-        $ make
-        $ sudo make install
+
+  ```bash
+  tar zxvf jpegsrc.v7.tar.gz
+  cd jpeg-7
+  ./configure --enable-shared --enable-static
+  make
+  sudo make install
+  ```
+
 - Download PIL from here: http://effbot.org/downloads/Imaging-1.1.6.tar.gz
-- 
-        $ tar zxvf Imaging-1.1.6.tar.gz
-        $ cd Imaging-1.1.6
+
+  ```bash
+  tar zxvf Imaging-1.1.6.tar.gz
+  cd Imaging-1.1.6
+  ```
+
 - Edit setup.py, set JPEG_ROOT = libinclude("/usr/local")
 - Build and setup
-        $ python setup.py build
-        $ sudo python setup.py install --optimize=1
+
+  ```bash
+  python setup.py build
+  sudo python setup.py install --optimize=1
+  ```
+
 - Restart eclipse if you are using it. Done!
 
 ## References

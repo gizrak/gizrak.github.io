@@ -69,6 +69,7 @@ JkUnMount /project/images/*      trust
 ```
 
 ## server.xml
+
 Apache쪽 jk 설정이 모두 끝났으면 이제 Tomcat 쪽에서 AJP 연결을 해주면 된다.
 
 ```xml

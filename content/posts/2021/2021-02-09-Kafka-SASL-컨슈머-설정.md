@@ -9,8 +9,8 @@ category:
 Mac 기준으로 `brew`를 이용하여 설치 후 서비스로 구동합니다.
 
 ```shell
-$ brew install kafka
-$ brew services start kafka
+brew install kafka
+brew services start kafka
 ```
 
 ## SASL 컨슈머 설정

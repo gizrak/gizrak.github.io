@@ -14,5 +14,7 @@ category:
 ### References
 
 [^1]: Oracle Certified Associate
+
 [^2]: Oracle Certified Professional
+
 [^3]: Oracle Certified Master

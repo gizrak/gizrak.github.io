@@ -7,14 +7,16 @@ category:
 대량의 자료를 처리할 수 있는 큰 컴퓨터 클러스터에서 동작하는 분산 응용 프로그램을 지원하는 자유 자바 소프트웨어 프레임워크
 
 ## Hadoop의 개요
+
 ### 왜 쓰는가?
+
 - map()과 reduce()만 오버라이딩: 로직을 구현한다
 - 나머지 병렬처리/분산처리/클러스터링 부분은 Hadoop이 처리함
 - Xaas: SaaS, DaaS, IaaS, PaaS
 - Big Data 이전 Virtualization(가상화) 필요
 - Utility Computing: on demand, cloud computing
 - CPU: socket당 core 여러개가 있음. VM쪽에서 core당 4~5개 가상머신 설치 권장.
-  - 2 Socket * 10 Core * 5 VM = 100 VM(s)
+  - 2 Socket _10 Core_ 5 VM = 100 VM(s)
 - SDN: SW Defined Network
 - Network, CPU도 가상화 진행 중
 - IT 주도권: 엔지니어 → 프로그래머 → 사용자
@@ -64,12 +66,13 @@ Java로 map(), reduce()를 구현하여 jar 파일을 돌려야 함. 기본 제�
 ### 단어 개수 세기
 
 ```shell
-$ $HADOOP_HOME/bin/hadoop dfs -mkdir input 
-$ $HADOOP_HOME/bin/hadoop dfs -put README.txt input/ 
-$ $HADOOP_HOME/bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output
+$HADOOP_HOME/bin/hadoop dfs -mkdir input
+$HADOOP_HOME/bin/hadoop dfs -put README.txt input/
+$HADOOP_HOME/bin/hadoop jar hadoop-examples-1.2.1.jar wordcount input output
 ```
 
 ## 시험
+
 - 잡이 제출될 때 HDFS에 배포되는 두 개의 파일을 기술하시오
   - job.xml과 job.jar 파일
 - 하둡의 네임노드와 보조 네임노드와의 체크포인트 동작을 설명하시오

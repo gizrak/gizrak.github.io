@@ -4,8 +4,8 @@ category:
   - Data
 ---
 
-* MySQL 데이터타입: <http://ra2kstar.tistory.com/82>
-* MySQL 사용자: <http://gpgstudy.com/gpgiki/MySQL에서%20사용자와%20데이터베이스%20만들기>
+- MySQL 데이터타입: <http://ra2kstar.tistory.com/82>
+- MySQL 사용자: <http://gpgstudy.com/gpgiki/MySQL에서%20사용자와%20데이터베이스%20만들기>
 
 ## DDL
 
@@ -139,11 +139,13 @@ innodb_buffer_pool_size = 7G
 ```
 
 MySQL에서 현재 설정되어 있는 환경변수를 보기 위해서는 아래와 같이 쿼리
+
 ```sql
 show variables where variable_name like 'thread%';
 ```
 
 MySQL에서 현재 구동하고 있는 쿼리 프로세스들을 보기 위해선 아래와 같이 쿼리
+
 ```sql
 show full processlist;
 ```
@@ -151,22 +153,26 @@ show full processlist;
 ## root 암호 변경
 
 ### secure installation
+
 ```sh
-$ mysql_secure_installation
+mysql_secure_installation
 ```
 
 ### mysqladmin을 이용
+
 ```sh
-$ mysqladmin -u root password new-password
+mysqladmin -u root password new-password
 ```
 
 ### update문을 이용
+
 ```sql
 UPDATE USER SET password = password('new-password') WHERE USER = 'root';
 FLUSH privileges;
 ```
 
 ### set password를 이용
+
 ```sql
 SET password FOR root = password('new-password');
 ```
