@@ -11,18 +11,57 @@ const BlogPostTemplate = ({ data }) => {
 
   const date = post.frontmatter.date || post.fields.date
   const allCategories = post.fields.allCategories || []
+  const siteUrl = data.site.siteMetadata.siteUrl
+  const authorName = data.site.siteMetadata.author.name
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.frontmatter.title,
+    description: post.excerpt,
+    url: `${siteUrl}${post.fields.slug}`,
+    datePublished: date,
+    dateModified: date,
+    author: {
+      "@type": "Person",
+      name: authorName,
+      url: `${siteUrl}/about`,
+    },
+    publisher: {
+      "@type": "Organization",
+      name: data.site.siteMetadata.title,
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/icons/icon-512x512.png`,
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${siteUrl}${post.fields.slug}`,
+    },
+  }
 
   return (
     <Layout>
       <Seo
         title={post.frontmatter.title}
         description={post.excerpt}
-      />
+        url={post.fields.slug}
+        type="article"
+        article={{
+          publishedTime: date,
+          author: authorName,
+        }}
+      >
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      </Seo>
       <article className="blog-post" itemScope itemType="http://schema.org/Article">
         <header className="post-header">
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <div className="post-meta">
-            {date && <time dateTime={date}>{date}</time>}
+            {date && <time dateTime={date} itemProp="datePublished">{date}</time>}
             {allCategories.length > 0 && (
               <span className="post-categories">
                 {allCategories.map(cat => (
@@ -114,6 +153,15 @@ export const pageQuery = graphql`
     $prevId: String
     $nextId: String
   ) {
+    site {
+      siteMetadata {
+        title
+        siteUrl
+        author {
+          name
+        }
+      }
+    }
     markdownRemark(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
