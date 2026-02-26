@@ -1,13 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const PostsArchivePage = ({ data }) => {
   const posts = data.allMarkdownRemark.nodes
+  const [activeCategory, setActiveCategory] = useState(null)
+
+  // Collect all unique categories
+  const categorySet = new Set()
+  posts.forEach(post => {
+    const cats = post.fields.allCategories || []
+    cats.forEach(cat => {
+      if (cat) categorySet.add(cat)
+    })
+  })
+  const categories = Array.from(categorySet).sort((a, b) =>
+    a.localeCompare(b, "ko")
+  )
+
+  // Filter posts by active category
+  const filteredPosts = activeCategory
+    ? posts.filter(post =>
+        (post.fields.allCategories || []).includes(activeCategory)
+      )
+    : posts
 
   // Group by year
-  const byYear = posts.reduce((acc, post) => {
+  const byYear = filteredPosts.reduce((acc, post) => {
     const date = post.fields.date || post.frontmatter.date || ``
     const year = date.substring(0, 4) || `Unknown`
     if (!acc[year]) acc[year] = []
@@ -24,6 +44,30 @@ const PostsArchivePage = ({ data }) => {
         <h1>Blog</h1>
         <p className="archive-count">총 {posts.length}개의 글</p>
       </header>
+
+      <div className="category-filter">
+        <button
+          className={`category-filter-btn${!activeCategory ? " active" : ""}`}
+          onClick={() => setActiveCategory(null)}
+        >
+          전체
+        </button>
+        {categories.map(cat => (
+          <button
+            key={cat}
+            className={`category-filter-btn${activeCategory === cat ? " active" : ""}`}
+            onClick={() => setActiveCategory(activeCategory === cat ? null : cat)}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
+
+      {activeCategory && (
+        <p className="category-filter-count">
+          <strong>{activeCategory}</strong> — {filteredPosts.length}개의 글
+        </p>
+      )}
 
       {years.map(year => (
         <section key={year} className="archive-year">
@@ -52,7 +96,7 @@ export const pageQuery = graphql`
       sort: { fields: { date: DESC } }
     ) {
       nodes {
-        fields { slug date }
+        fields { slug date allCategories }
         frontmatter { title date }
       }
     }

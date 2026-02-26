@@ -359,6 +359,45 @@ img {
 }
 
 /* ========================================
+   Category Filter
+   ======================================== */
+.category-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.category-filter-btn {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.8125rem;
+  color: #555;
+  cursor: pointer;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+  line-height: 1.5;
+}
+
+.category-filter-btn:hover {
+  background: #e0e0e0;
+  color: #333;
+}
+
+.category-filter-btn.active {
+  background: #333;
+  border-color: #333;
+  color: #fff;
+}
+
+.category-filter-count {
+  font-size: 0.875rem;
+  color: #666;
+  margin: -0.5rem 0 1.25rem 0;
+}
+
+/* ========================================
    Archive (yearly list)
    ======================================== */
 .archive-year {
