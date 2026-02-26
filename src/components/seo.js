@@ -2,7 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
-const Seo = ({ description, title, children }) => {
+const Seo = ({ description, title, image, url, type, article, children }) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -10,6 +10,7 @@ const Seo = ({ description, title, children }) => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               twitter
             }
@@ -21,6 +22,11 @@ const Seo = ({ description, title, children }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const siteUrl = site.siteMetadata.siteUrl
+  const canonicalUrl = url ? `${siteUrl}${url}` : null
+  const ogType = type || `website`
+  const defaultImage = `${siteUrl}/assets/images/gizrak.jpg`
+  const metaImage = image || defaultImage
 
   return (
     <Helmet
@@ -31,6 +37,7 @@ const Seo = ({ description, title, children }) => {
           name: `description`,
           content: metaDescription,
         },
+        // Open Graph
         {
           property: `og:title`,
           content: title,
@@ -41,15 +48,64 @@ const Seo = ({ description, title, children }) => {
         },
         {
           property: `og:type`,
-          content: `website`,
+          content: ogType,
+        },
+        ...(canonicalUrl
+          ? [{ property: `og:url`, content: canonicalUrl }]
+          : []),
+        {
+          property: `og:site_name`,
+          content: defaultTitle,
         },
         {
+          property: `og:locale`,
+          content: `ko_KR`,
+        },
+        {
+          property: `og:image`,
+          content: metaImage,
+        },
+        {
+          property: `og:image:width`,
+          content: `1200`,
+        },
+        {
+          property: `og:image:height`,
+          content: `630`,
+        },
+        // Article-specific OG tags
+        ...(article?.publishedTime
+          ? [
+              {
+                property: `article:published_time`,
+                content: article.publishedTime,
+              },
+            ]
+          : []),
+        ...(article?.author
+          ? [
+              {
+                property: `article:author`,
+                content: article.author,
+              },
+            ]
+          : []),
+        // Twitter Card
+        {
           name: `twitter:card`,
-          content: `summary`,
+          content: `summary_large_image`,
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.social?.twitter || ``,
+          content: site.siteMetadata?.social?.twitter
+            ? `@${site.siteMetadata.social.twitter}`
+            : ``,
+        },
+        {
+          name: `twitter:site`,
+          content: site.siteMetadata?.social?.twitter
+            ? `@${site.siteMetadata.social.twitter}`
+            : ``,
         },
         {
           name: `twitter:title`,
@@ -59,8 +115,13 @@ const Seo = ({ description, title, children }) => {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          name: `twitter:image`,
+          content: metaImage,
+        },
       ]}
     >
+      {canonicalUrl && <link rel="canonical" href={canonicalUrl} />}
       {children}
     </Helmet>
   )

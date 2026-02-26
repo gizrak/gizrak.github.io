@@ -7,11 +7,42 @@ import Seo from "../components/seo"
 const IndexTemplate = ({ data, pageContext }) => {
   const posts = data.allMarkdownRemark.nodes
   const { previousPagePath, nextPagePath, humanPageNumber, numberOfPages } = pageContext
+  const { siteUrl, title, description, author, social } = data.site.siteMetadata
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: title,
+    url: siteUrl,
+    description: description,
+    author: {
+      "@type": "Person",
+      name: author.name,
+      url: `${siteUrl}/about`,
+      sameAs: [
+        `https://twitter.com/${social.twitter}`,
+        `https://github.com/${social.github}`,
+        `https://linkedin.com/in/${social.linkedin}`,
+      ],
+    },
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${siteUrl}/posts?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
+  }
 
   if (posts.length === 0) {
     return (
       <Layout>
-        <Seo title="Home" />
+        <Seo title="Home" url="/">
+          <script type="application/ld+json">
+            {JSON.stringify(jsonLd)}
+          </script>
+        </Seo>
         <Bio />
         <p>포스트가 없습니다.</p>
       </Layout>
@@ -20,7 +51,13 @@ const IndexTemplate = ({ data, pageContext }) => {
 
   return (
     <Layout>
-      <Seo title="Home" />
+      <Seo title="Home" url={humanPageNumber === 1 ? "/" : `/page/${humanPageNumber}/`}>
+        {humanPageNumber === 1 && (
+          <script type="application/ld+json">
+            {JSON.stringify(jsonLd)}
+          </script>
+        )}
+      </Seo>
       {humanPageNumber === 1 && <Bio />}
       <ol className="post-list">
         {posts.map(post => {
@@ -68,6 +105,21 @@ const IndexTemplate = ({ data, pageContext }) => {
 
 export const pageQuery = graphql`
   query IndexPage($skip: Int!, $limit: Int!) {
+    site {
+      siteMetadata {
+        title
+        description
+        siteUrl
+        author {
+          name
+        }
+        social {
+          twitter
+          github
+          linkedin
+        }
+      }
+    }
     allMarkdownRemark(
       filter: { fields: { sourceInstanceName: { eq: "posts" } } }
       sort: { fields: { date: DESC } }

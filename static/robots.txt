@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gizrak.github.io/sitemap-index.xml

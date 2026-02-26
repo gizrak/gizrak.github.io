@@ -5,8 +5,9 @@ module.exports = {
       name: `Ted Hwang`,
       summary: `🌱 매일 성장 중!`,
     },
-    description: `Always with me`,
+    description: `Ted Hwang의 기술 블로그 - 개발, 데이터, AI, 일상을 기록합니다.`,
     siteUrl: `https://gizrak.github.io`,
+    language: `ko-KR`,
     social: {
       twitter: `gizrak`,
       github: `gizrak`,
@@ -97,7 +98,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-sitemap`,
       options: {
-        output: `/sitemap`,
+        output: `/`,
       },
     },
     // RSS Feed
