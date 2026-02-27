@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 
 const SearchPage = ({ data, location }) => {
-  const allPosts = data.allMarkdownRemark.nodes
+  const allItems = data.allMarkdownRemark.nodes
 
   // Read initial query from URL params
   const params =
@@ -30,16 +30,24 @@ const SearchPage = ({ data, location }) => {
   const lowerQuery = query.toLowerCase().trim()
 
   const results = lowerQuery
-    ? allPosts.filter(post => {
-        const title = (post.frontmatter.title || "").toLowerCase()
-        const excerpt = (post.excerpt || "").toLowerCase()
-        const categories = (post.fields.allCategories || [])
+    ? allItems.filter(item => {
+        const title = (item.frontmatter.title || "").toLowerCase()
+        const excerpt = (item.excerpt || "").toLowerCase()
+
+        // posts use fields.allCategories, notes use frontmatter.category
+        const postCats = (item.fields.allCategories || []).join(" ").toLowerCase()
+        const noteCatsRaw = item.frontmatter.category || []
+        const noteCats = (
+          Array.isArray(noteCatsRaw) ? noteCatsRaw : [noteCatsRaw]
+        )
           .join(" ")
           .toLowerCase()
+
         return (
           title.includes(lowerQuery) ||
           excerpt.includes(lowerQuery) ||
-          categories.includes(lowerQuery)
+          postCats.includes(lowerQuery) ||
+          noteCats.includes(lowerQuery)
         )
       })
     : []
@@ -71,16 +79,31 @@ const SearchPage = ({ data, location }) => {
 
       {results.length > 0 ? (
         <ol className="search-results">
-          {results.map(post => {
-            const date = post.fields.date || post.frontmatter.date
-            const categories = post.fields.allCategories || []
+          {results.map(item => {
+            const date = item.fields.date || item.frontmatter.date
+            const isNote = item.fields.sourceInstanceName === "notes"
+
+            const categories = isNote
+              ? (() => {
+                  const raw = item.frontmatter.category || []
+                  return Array.isArray(raw) ? raw : [raw]
+                })()
+              : item.fields.allCategories || []
+
             return (
-              <li key={post.fields.slug} className="search-result-item">
-                <Link to={post.fields.slug} className="search-result-title">
-                  {post.frontmatter.title}
+              <li key={item.fields.slug} className="search-result-item">
+                <Link to={item.fields.slug} className="search-result-title">
+                  {item.frontmatter.title}
                 </Link>
                 <div className="search-result-meta">
-                  {date && <small className="search-result-date">{date}</small>}
+                  <span
+                    className={`search-result-type ${isNote ? "search-result-type--note" : "search-result-type--post"}`}
+                  >
+                    {isNote ? "Note" : "Post"}
+                  </span>
+                  {date && (
+                    <small className="search-result-date">{date}</small>
+                  )}
                   {categories.length > 0 && (
                     <span className="search-result-categories">
                       {categories.map(cat => (
@@ -91,8 +114,8 @@ const SearchPage = ({ data, location }) => {
                     </span>
                   )}
                 </div>
-                {post.excerpt && (
-                  <p className="search-result-excerpt">{post.excerpt}</p>
+                {item.excerpt && (
+                  <p className="search-result-excerpt">{item.excerpt}</p>
                 )}
               </li>
             )
@@ -106,9 +129,11 @@ const SearchPage = ({ data, location }) => {
 }
 
 export const pageQuery = graphql`
-  query SearchPosts {
+  query SearchAll {
     allMarkdownRemark(
-      filter: { fields: { sourceInstanceName: { eq: "posts" } } }
+      filter: {
+        fields: { sourceInstanceName: { in: ["posts", "notes"] } }
+      }
       sort: { fields: { date: DESC } }
     ) {
       nodes {
@@ -117,10 +142,12 @@ export const pageQuery = graphql`
           slug
           date
           allCategories
+          sourceInstanceName
         }
         frontmatter {
           title
           date
+          category
         }
       }
     }
