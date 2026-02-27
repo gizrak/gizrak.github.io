@@ -497,6 +497,101 @@ img {
 }
 
 /* ========================================
+   Search Nav Icon
+   ======================================== */
+.nav-search {
+  display: flex;
+  align-items: center;
+  color: #555;
+  line-height: 1;
+}
+
+.nav-search:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+/* ========================================
+   Search Page
+   ======================================== */
+.search-box {
+  margin-bottom: 1.25rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.search-input:focus {
+  border-color: #0070f3;
+}
+
+.search-count {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0 0 1.25rem 0;
+}
+
+.search-results {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.search-result-item {
+  padding: 1rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-title {
+  font-size: 1rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+.search-result-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.4rem;
+}
+
+.search-result-date {
+  color: #888;
+  font-size: 0.8125rem;
+}
+
+.search-result-categories {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.search-result-excerpt {
+  font-size: 0.8125rem;
+  color: #555;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.search-empty {
+  color: #888;
+  font-size: 0.9rem;
+}
+
+/* ========================================
    Utterances
    ======================================== */
 .utterances-container {
