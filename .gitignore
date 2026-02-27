@@ -34,3 +34,6 @@ public
 *.iml
 *.ipr
 out/
+
+# Temporary files
+tmp/
