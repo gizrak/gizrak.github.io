@@ -466,8 +466,7 @@ img {
 /* ========================================
    Note / About page
    ======================================== */
-.note-post .note-category,
-.about-page .about-category {
+.note-post .note-category {
   font-size: 0.8125rem;
   color: #666;
   margin-top: 0.25rem;
