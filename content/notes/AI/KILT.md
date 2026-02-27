@@ -1,8 +1,10 @@
 ---
-title: KILT (Knowledge Intensive Language Tasks)
+title: KILT
 category:
-  - Technology
+  - AI
 ---
+
+`Knowledge Intensive Language Tasks`
 
 > Facebook AI Research에서 제안한 지식 집약적 자연어 처리 벤치마크 프레임워크
 

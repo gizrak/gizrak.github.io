@@ -1,7 +1,7 @@
 ---
 title: Code LLM
 category:
-  - Technology
+  - AI
 ---
 
 > 코드 생성에 특화된 대형 언어 모델(LLM)

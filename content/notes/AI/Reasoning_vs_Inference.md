@@ -1,7 +1,7 @@
 ---
 title: Reasoning vs Inference
 category:
-  - Technology
+  - AI
 ---
 
 > AI/LLM 맥락에서 자주 혼용되는 두 개념의 차이

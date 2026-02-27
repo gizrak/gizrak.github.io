@@ -1,7 +1,7 @@
 ---
 title: Fine Tuning
 category:
-  - Technology
+  - AI
 ---
 
 > 기존에 학습된 모델을 새로운 목적에 맞게 재학습하는 기법
@@ -31,7 +31,7 @@ category:
 
 ## 관련 노트
 
-- [신경망 (Neural Network)](/notes/Neural_Network/) - 신경망 기본 구조
+- [신경망](/notes/신경망/) - 신경망 기본 구조
 - [Machine Learning](/notes/Machine_Learning/) - 머신러닝 학습 유형
 - [KILT](/notes/KILT/) - RAG vs Fine Tuning 비교 및 지식 집약적 작업
 - [CLIP](/notes/CLIP/) - Zero-shot 학습 (Fine Tuning 없이 일반화)

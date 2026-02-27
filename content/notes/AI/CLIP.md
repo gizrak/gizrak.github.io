@@ -1,8 +1,10 @@
 ---
-title: CLIP (Contrastive Language-Image Pre-Training)
+title: CLIP
 category:
-  - Technology
+  - AI
 ---
+
+`Contrastive Language-Image Pre-Training`
 
 > OpenAI에서 개발한 멀티모달 신경망 모델
 > 이미지 인코더와 텍스트 인코더를 공동으로 훈련하여 이미지-텍스트 공유 임베딩 공간을 학습
@@ -68,7 +70,7 @@ print("레이블 확률:", probs)
 
 ## 관련 노트
 
-- [신경망 (Neural Network)](/notes/Neural_Network/) - CNN/RNN 기반 신경망 구조
+- [신경망](/notes/신경망/) - CNN/RNN 기반 신경망 구조
 - [NLP](/notes/NLP/) - 텍스트 임베딩 기법 (Word2Vec, Transformer 등)
 - [Fine Tuning](/notes/Fine_Tuning/) - 사전학습 모델 파라미터 조정
 - [KILT](/notes/KILT/) - 지식 집약적 언어 작업 (RAG 포함)

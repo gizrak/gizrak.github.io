@@ -62,7 +62,7 @@ AIRFLOW_UID=50000
 ## 관련 노트
 
 - [Docker](/notes/Docker/) - Lima 기반 Docker 환경 설정
-- [Data Engineering](/notes/Data_Engineering/) - 데이터 파이프라인 관리
+- [데이터 엔지니어링](/notes/데이터_엔지니어링/) - 데이터 파이프라인 관리
 
 ## 참고
 

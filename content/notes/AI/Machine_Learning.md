@@ -1,7 +1,7 @@
 ---
 title: Machine Learning
 category:
-  - Technology
+  - AI
 ---
 
 > 학문적 정의와 알고리즘 분류는 [기계학습](/notes/기계학습/) 참조
@@ -67,7 +67,7 @@ category:
 ## 관련 노트
 
 - [기계학습](/notes/기계학습/) - 학문적 정의 및 알고리즘 분류
-- [신경망 (Neural Network)](/notes/Neural_Network/) - ANN/DNN/CNN/RNN 구조
+- [신경망](/notes/신경망/) - ANN/DNN/CNN/RNN 구조
 - [NLP](/notes/NLP/) - 자연어 처리
 - [Fine Tuning](/notes/Fine_Tuning/) - 사전학습 모델 파라미터 조정
 - [KILT](/notes/KILT/) - 지식 집약적 언어 작업 벤치마크

@@ -1,8 +1,10 @@
 ---
-title: 메시지 브로커 (Message Broker)
+title: 메시지 브로커
 category:
   - Technology
 ---
+
+`Message Broker`
 
 > 애플리케이션, 시스템, 서비스 간 통신과 정보 교환을 중개하는 소프트웨어
 

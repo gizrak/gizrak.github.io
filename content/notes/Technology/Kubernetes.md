@@ -1,8 +1,10 @@
 ---
-title: Kubernetes (K8s)
+title: Kubernetes
 category:
   - Technology
 ---
+
+`K8s`
 
 > 컨테이너 오케스트레이션 플랫폼 → [가상화](/notes/가상화/) 참조
 

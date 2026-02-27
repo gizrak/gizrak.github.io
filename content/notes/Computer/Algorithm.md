@@ -1,8 +1,10 @@
 ---
-title: 알고리즘 (Algorithm)
+title: 알고리즘
 category:
   - Computer
 ---
+
+`Algorithm`
 
 ## 알고리즘의 기본 조건
 

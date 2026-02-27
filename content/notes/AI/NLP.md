@@ -1,8 +1,10 @@
 ---
-title: NLP (Natural Language Processing)
+title: NLP
 category:
-  - Technology
+  - AI
 ---
+
+`Natural Language Processing`
 
 > 자연어 처리 - 컴퓨터가 인간의 언어를 이해하고 처리하는 기술
 
@@ -53,7 +55,7 @@ category:
 
 ## 관련 노트
 
-- [신경망 (Neural Network)](/notes/Neural_Network/) - RNN 구조 (NLP에 활용)
+- [신경망](/notes/신경망/) - RNN 구조 (NLP에 활용)
 - [CLIP](/notes/CLIP/) - 이미지-텍스트 멀티모달 (Contrastive Learning 활용)
 - [KILT](/notes/KILT/) - 지식 집약적 언어 작업 벤치마크 (RAG, Attention 포함)
 - [Code LLM](/notes/Code_LLM/) - 코드 생성 LLM
