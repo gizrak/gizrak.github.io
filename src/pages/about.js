@@ -10,16 +10,14 @@ const AboutPage = ({ data }) => {
   return (
     <Layout>
       <Seo title="About" />
-      <article className="about-page">
-        <header className="post-header">
-          <h1>{page.frontmatter.title}</h1>
-        </header>
-        {page.tableOfContents && <Toc toc={page.tableOfContents} />}
-        <section
-          dangerouslySetInnerHTML={{ __html: page.html }}
-          className="post-body"
-        />
-      </article>
+      <header className="page-header">
+        <h1>{page.frontmatter.title}</h1>
+      </header>
+      {page.tableOfContents && <Toc toc={page.tableOfContents} />}
+      <section
+        dangerouslySetInnerHTML={{ __html: page.html }}
+        className="post-body"
+      />
     </Layout>
   )
 }
