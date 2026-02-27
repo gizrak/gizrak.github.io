@@ -6,7 +6,7 @@ Ted Hwang의 개인 블로그. Gatsby로 구축됩니다.
 
 ```bash
 npm install
-npm run develop   # http://localhost:8000
+npm start   # http://localhost:8000
 ```
 
 ## 빌드
