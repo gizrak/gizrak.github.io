@@ -40,6 +40,25 @@ Project/
 
 - [Python으로 Telegram Bot 활용하기](https://blog.psangwoo.com/coding/2018/08/20/python-telegram-bot-4.html)
 
+## PyCon 컨퍼런스
+
+### 파이콘 한국
+
+- [파이콘 한국 2014](https://archive.pycon.kr/2014/programs/list/)
+- [파이콘 한국 2015](https://archive.pycon.kr/2015/programs/list/)
+- [파이콘 APAC 2016](https://archive.pycon.kr/2016apac/program/list/)
+- [파이콘 한국 2017](https://archive.pycon.kr/2017/)
+- [파이콘 한국 2018](https://archive.pycon.kr/2018/)
+- [파이콘 한국 2020](https://2020.pycon.kr/2020/)
+- [파이콘 한국 2021](https://2021.pycon.kr/session/)
+- [파이콘 한국 2022](https://2022.pycon.kr/)
+- [파이콘 한국 2023](https://2023.pycon.kr/)
+
+### 파이콘 해외
+
+- [PyCon APAC 2014 (Taiwan)](https://tw.pycon.org/2014apac/en/program/)
+- [PyCon APAC 2015 (Taiwan)](https://tw.pycon.org/2015apac/en/schedule/)
+
 ## 참조
 
 - 위키독스: 다이브 인투 파이썬 <http://wikidocs.net/mybook/4969>
