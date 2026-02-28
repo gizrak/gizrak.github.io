@@ -41,7 +41,7 @@ const PortfolioItemTemplate = ({ data }) => {
       </article>
 
       <div className="back-link">
-        <Link to="/portfolio/">← 포트폴리오로</Link>
+        <Link to="/about/">← About으로</Link>
       </div>
     </Layout>
   )

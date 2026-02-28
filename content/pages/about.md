@@ -2,6 +2,8 @@
 title: "About"
 ---
 
+## 소개
+
 > <a href="https://about.me/gizrak" class="btn btn--info">About Me</a>
 
 - 경험이 없으면 노력을 한다. 경험이 쌓이는 만큼 노력은 요령으로 대체된다.
@@ -28,6 +30,7 @@ title: "About"
 - 2010: 모바일 서비스 개발
 - 2016: 핀테크 개발
 - 2020: 이커머스 개발
+- 2023: AI/Data 엔지니어링
 
 ## 인생 목차
 
@@ -42,6 +45,13 @@ title: "About"
 - 2016: 첫 이직
 - 2017: 내 집 장만
 - 2019: ApacheCon 라스베가스
+
+## 프로젝트
+
+학습 목적 혹은 개인 프로젝트로 만들었던 서비스와 앱들입니다.
+
+- [Baduk](/baduk/) - Baduk board game which can play by game record by myself developed by web technology.
+- [절친 월드컵](/worldcup/) - 컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임.
 
 ## Public Key
 

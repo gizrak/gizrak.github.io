@@ -1,5 +1,6 @@
 ---
 title: "절친 월드컵"
+type: portfolio
 excerpt: "컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임."
 header:
   image: /assets/images/worldcup/worldcup-splash.jpg
@@ -24,8 +25,6 @@ gallery:
 
 아래 주소에서 크롬 확장 어플리케이션으로도 설치가 가능합니다.
 <https://chrome.google.com/webstore/detail/nlcmnbcpdocigdogindcaoejejedbfnb>
-
-{% include gallery caption="친구들의 사진을 사용" %}
 
 ## 사용법
 

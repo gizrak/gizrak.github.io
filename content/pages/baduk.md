@@ -1,5 +1,6 @@
 ---
 title: "Baduk"
+type: portfolio
 excerpt: "Baduk board game which can play by game record by myself developed by web technology."
 header:
   image: /assets/images/baduk/baduk-splash.png
@@ -24,8 +25,6 @@ gallery:
 ---
 
 **Baduk(Go)** is a popular board game that has long been loved in East Asia. Alpha-Go and Lee Se-dol's games attracted attention from all over the world. My father likes this game, but there weren't many ways to enjoy Baduk online than I decided to develop. So, this app has been implemented to play Baduk with the most accessible web.
-
-{% include gallery caption="Baduk board game play screenshots" %}
 
 These are the major features.
 

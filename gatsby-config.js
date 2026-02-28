@@ -38,14 +38,6 @@ module.exports = {
         path: `${__dirname}/content/notes`,
       },
     },
-    // Portfolio
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `portfolio`,
-        path: `${__dirname}/content/portfolio`,
-      },
-    },
     // Static pages (about)
     {
       resolve: `gatsby-source-filesystem`,

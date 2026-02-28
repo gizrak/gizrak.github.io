@@ -4,12 +4,12 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Toc from "../components/toc"
 
-const AboutPage = ({ data }) => {
+const LinksPage = ({ data }) => {
   const page = data.markdownRemark
 
   return (
     <Layout>
-      <Seo title="About" />
+      <Seo title="Links" />
       <header className="page-header">
         <h1>{page.frontmatter.title}</h1>
       </header>
@@ -23,9 +23,9 @@ const AboutPage = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query AboutPage {
+  query LinksPage {
     markdownRemark(
-      fields: { sourceInstanceName: { eq: "pages" }, slug: { eq: "/about/" } }
+      fields: { sourceInstanceName: { eq: "pages" }, slug: { eq: "/links/" } }
     ) {
       html
       tableOfContents
@@ -36,4 +36,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default AboutPage
+export default LinksPage

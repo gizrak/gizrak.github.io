@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
           <div className="nav-links">
             <Link to="/about/">About</Link>
             <Link to="/posts/">Blog</Link>
-            <Link to="/portfolio/">Portfolio</Link>
+            <Link to="/links/">Links</Link>
             <Link to="/notes/">Notes</Link>
             <Link to="/search/" className="nav-search" aria-label="검색">
               <svg

@@ -82,6 +82,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             date
             categories
             category
+            type
           }
         }
       }
@@ -96,7 +97,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allNodes = result.data.allMarkdownRemark.nodes
   const posts = allNodes.filter(n => n.fields.sourceInstanceName === `posts`)
   const notes = allNodes.filter(n => n.fields.sourceInstanceName === `notes`)
-  const portfolioItems = allNodes.filter(n => n.fields.sourceInstanceName === `portfolio`)
+  const portfolioItems = allNodes.filter(n => n.fields.sourceInstanceName === `pages` && n.frontmatter.type === `portfolio`)
 
   // Sort posts by date descending
   const sortedPosts = [...posts].sort((a, b) => {
