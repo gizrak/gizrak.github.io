@@ -3,24 +3,24 @@ title: "Baduk"
 type: project
 excerpt: "Baduk board game which can play by game record by myself developed by web technology."
 header:
-  image: /assets/images/baduk/baduk-splash.png
-  teaser: assets/images/baduk/baduk-splash-th.png
+  image: /assets/images/projects/baduk/baduk-splash.png
+  teaser: assets/images/projects/baduk/baduk-splash-th.png
 sidebar:
   - title: "Site"
-    image: /assets/images/baduk/baduk-placehold.jpg
+    image: /assets/images/projects/baduk/baduk-placehold.jpg
     image_alt: "Baduk game"
     text: <https://gizrak-baduk.herokuapp.com/>
   - title: "Description"
     text: "Everyone can make their own game records on web"
 gallery:
-  - url: /assets/images/baduk/baduk-1.jpg
-    image_path: assets/images/baduk/baduk-1-th.jpg
+  - url: /assets/images/projects/baduk/baduk-1.jpg
+    image_path: assets/images/projects/baduk/baduk-1-th.jpg
     alt: "Baduk image 1"
-  - url: /assets/images/baduk/baduk-2.jpg
-    image_path: assets/images/baduk/baduk-2-th.jpg
+  - url: /assets/images/projects/baduk/baduk-2.jpg
+    image_path: assets/images/projects/baduk/baduk-2-th.jpg
     alt: "Baduk image 2"
-  - url: /assets/images/baduk/baduk-3.jpg
-    image_path: assets/images/baduk/baduk-3-th.jpg
+  - url: /assets/images/projects/baduk/baduk-3.jpg
+    image_path: assets/images/projects/baduk/baduk-3-th.jpg
     alt: "Baduk image 3"
 ---
 

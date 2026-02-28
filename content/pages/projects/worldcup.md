@@ -3,21 +3,21 @@ title: "절친 월드컵"
 type: project
 excerpt: "컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임."
 header:
-  image: /assets/images/worldcup/worldcup-splash.jpg
-  teaser: assets/images/worldcup/worldcup-splash-th.jpg
+  image: /assets/images/projects/worldcup/worldcup-splash.jpg
+  teaser: assets/images/projects/worldcup/worldcup-splash-th.jpg
 sidebar:
   - title: "Site"
-    image: /assets/images/worldcup/worldcup-placehold.jpg
+    image: /assets/images/projects/worldcup/worldcup-placehold.jpg
     image_alt: "절친 월드컵"
     text: <https://gizrak-worldcup.herokuapp.com/>
   - title: "Description"
     text: "웹에서 가볍게 즐기는 절친 찾기 월드컵 게임"
 gallery:
-  - url: /assets/images/worldcup/worldcup-1.png
-    image_path: assets/images/worldcup/worldcup-1-th.png
+  - url: /assets/images/projects/worldcup/worldcup-1.png
+    image_path: assets/images/projects/worldcup/worldcup-1-th.png
     alt: "Worldcup image 1"
-  - url: /assets/images/worldcup/worldcup-2.png
-    image_path: assets/images/worldcup/worldcup-2-th.png
+  - url: /assets/images/projects/worldcup/worldcup-2.png
+    image_path: assets/images/projects/worldcup/worldcup-2-th.png
     alt: "Worldcup image 2"
 ---
 
