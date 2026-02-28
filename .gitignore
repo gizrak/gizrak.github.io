@@ -35,5 +35,5 @@ public
 *.ipr
 out/
 
-# Temporary files
-tmp/
+# Secret files
+secret/
