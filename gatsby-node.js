@@ -2,6 +2,17 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 const { paginate } = require(`gatsby-awesome-pagination`)
 
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions
+  createTypes(`
+    type MarkdownRemarkFrontmatterGallery {
+      url: String
+      image_path: String
+      alt: String
+    }
+  `)
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
@@ -50,14 +61,17 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     const slug = `/notes/${fileNode.name}/`
     createNodeField({ node, name: `slug`, value: slug })
 
-  } else if (sourceInstanceName === `portfolio`) {
-    // /portfolio/:filename/
-    const slug = `/portfolio/${fileNode.name}/`
+  } else if (sourceInstanceName === `project`) {
+    // /project/:filename/
+    const slug = `/project/${fileNode.name}/`
     createNodeField({ node, name: `slug`, value: slug })
 
   } else if (sourceInstanceName === `pages`) {
-    // Static pages — use filename as slug
-    const slug = `/${fileNode.name}/`
+    // Project pages use /project/:filename/, others use /:filename/
+    const isProject = node.frontmatter.type === `project`
+    const slug = isProject
+      ? `/project/${fileNode.name}/`
+      : `/${fileNode.name}/`
     createNodeField({ node, name: `slug`, value: slug })
   }
 }
@@ -97,7 +111,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const allNodes = result.data.allMarkdownRemark.nodes
   const posts = allNodes.filter(n => n.fields.sourceInstanceName === `posts`)
   const notes = allNodes.filter(n => n.fields.sourceInstanceName === `notes`)
-  const portfolioItems = allNodes.filter(n => n.fields.sourceInstanceName === `pages` && n.frontmatter.type === `portfolio`)
+  const projectItems = allNodes.filter(n => n.fields.sourceInstanceName === `pages` && n.frontmatter.type === `project`)
 
   // Sort posts by date descending
   const sortedPosts = [...posts].sort((a, b) => {
@@ -141,12 +155,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     })
   })
 
-  // Create individual portfolio pages
-  const portfolioItemTemplate = path.resolve(`./src/templates/portfolio-item.js`)
-  portfolioItems.forEach(item => {
+  // Create individual project pages
+  const projectItemTemplate = path.resolve(`./src/templates/project-item.js`)
+  projectItems.forEach(item => {
     createPage({
       path: item.fields.slug,
-      component: portfolioItemTemplate,
+      component: projectItemTemplate,
       context: { id: item.id },
     })
   })
