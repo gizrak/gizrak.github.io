@@ -29,15 +29,6 @@ const ProjectItemTemplate = ({ data }) => {
           className="post-body"
         />
 
-        {item.frontmatter.gallery && item.frontmatter.gallery.length > 0 && (
-          <div className="post-gallery">
-            {item.frontmatter.gallery.map((img, i) => (
-              <a key={i} href={img.url} target="_blank" rel="noreferrer">
-                <img src={img.image_path || img.url} alt={img.alt || ``} loading="lazy" />
-              </a>
-            ))}
-          </div>
-        )}
       </article>
 
       <div className="back-link">
@@ -56,11 +47,6 @@ export const pageQuery = graphql`
         excerpt
         header {
           image
-        }
-        gallery {
-          url
-          image_path
-          alt
         }
       }
     }

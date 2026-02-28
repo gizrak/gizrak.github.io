@@ -4,24 +4,6 @@ type: project
 excerpt: "Baduk board game which can play by game record by myself developed by web technology."
 header:
   image: /assets/images/projects/baduk/baduk-splash.png
-  teaser: assets/images/projects/baduk/baduk-splash-th.png
-sidebar:
-  - title: "Site"
-    image: /assets/images/projects/baduk/baduk-placehold.jpg
-    image_alt: "Baduk game"
-    text: <https://gizrak-baduk.herokuapp.com/>
-  - title: "Description"
-    text: "Everyone can make their own game records on web"
-gallery:
-  - url: /assets/images/projects/baduk/baduk-1.jpg
-    image_path: assets/images/projects/baduk/baduk-1-th.jpg
-    alt: "Baduk image 1"
-  - url: /assets/images/projects/baduk/baduk-2.jpg
-    image_path: assets/images/projects/baduk/baduk-2-th.jpg
-    alt: "Baduk image 2"
-  - url: /assets/images/projects/baduk/baduk-3.jpg
-    image_path: assets/images/projects/baduk/baduk-3-th.jpg
-    alt: "Baduk image 3"
 ---
 
 **Baduk(Go)** is a popular board game that has long been loved in East Asia. Alpha-Go and Lee Se-dol's games attracted attention from all over the world. My father likes this game, but there weren't many ways to enjoy Baduk online than I decided to develop. So, this app has been implemented to play Baduk with the most accessible web.
@@ -37,3 +19,11 @@ These are the major features.
 Currently, No. 1 and 2 have been implemented and the rest are left in TODO. After the initial implementation, I plan to implement the rest of the functions in turn. There are still parts that need to be touched, but there is no difference in practicing notation alone.
 
 The repository is <https://github.com/gizrak/baduk>.
+
+## 스크린샷
+
+![Baduk image 1](/assets/images/projects/baduk/baduk-1.jpg)
+
+![Baduk image 2](/assets/images/projects/baduk/baduk-2.jpg)
+
+![Baduk image 3](/assets/images/projects/baduk/baduk-3.jpg)

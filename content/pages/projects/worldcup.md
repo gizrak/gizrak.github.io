@@ -4,21 +4,6 @@ type: project
 excerpt: "컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임."
 header:
   image: /assets/images/projects/worldcup/worldcup-splash.jpg
-  teaser: assets/images/projects/worldcup/worldcup-splash-th.jpg
-sidebar:
-  - title: "Site"
-    image: /assets/images/projects/worldcup/worldcup-placehold.jpg
-    image_alt: "절친 월드컵"
-    text: <https://gizrak-worldcup.herokuapp.com/>
-  - title: "Description"
-    text: "웹에서 가볍게 즐기는 절친 찾기 월드컵 게임"
-gallery:
-  - url: /assets/images/projects/worldcup/worldcup-1.png
-    image_path: assets/images/projects/worldcup/worldcup-1-th.png
-    alt: "Worldcup image 1"
-  - url: /assets/images/projects/worldcup/worldcup-2.png
-    image_path: assets/images/projects/worldcup/worldcup-2-th.png
-    alt: "Worldcup image 2"
 ---
 
 웹에서 자신의 이상형이나 친구들 사진을 가지고 재미있는 월드컵 게임을 즐길 수 있습니다.
@@ -35,8 +20,14 @@ gallery:
 ## 주요 기능
 
 - 절친/이상형 월드컵 게임을 즐길 수 있음
-- 자신의 컴퓨터에 잇는 사진을 사용
+- 자신의 컴퓨터에 있는 사진을 사용
 - 선택한 사진 수에 맞게 16강, 8강, 4강, 결승 게임이 자동 선택됩니다.
+
+## 스크린샷
+
+![Worldcup image 1](/assets/images/projects/worldcup/worldcup-1.png)
+
+![Worldcup image 2](/assets/images/projects/worldcup/worldcup-2.png)
 
 ## 릴리즈 노트
 
