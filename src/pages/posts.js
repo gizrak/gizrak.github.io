@@ -1,11 +1,22 @@
-import React, { useState } from "react"
-import { graphql, Link } from "gatsby"
+import React from "react"
+import { graphql, Link, navigate } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const PostsArchivePage = ({ data }) => {
+const PostsArchivePage = ({ data, location }) => {
   const posts = data.allMarkdownRemark.nodes
-  const [activeCategory, setActiveCategory] = useState(null)
+
+  // Read active category from URL query param
+  const params = new URLSearchParams(location.search)
+  const activeCategory = params.get("category") || null
+
+  const setActiveCategory = cat => {
+    if (cat) {
+      navigate(`/posts/?category=${encodeURIComponent(cat)}`)
+    } else {
+      navigate(`/posts/`)
+    }
+  }
 
   // Collect all unique categories
   const categorySet = new Set()
