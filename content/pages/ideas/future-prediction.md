@@ -13,7 +13,7 @@ title: 미래예측 시나리오 파이프라인
 
 ## 아키텍처
 
-![아키텍처](/assets/images/idea/image-234.png)
+![아키텍처](/assets/images/idea/future-prediction-architecture.png)
 
 ## 주제 또는 아이템
 

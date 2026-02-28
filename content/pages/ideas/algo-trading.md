@@ -20,7 +20,7 @@ title: 알고리즘 트레이딩
 
 ## 아키텍처
 
-![아키텍처](/assets/images/idea/untitled.png)
+![아키텍처](/assets/images/idea/algo-trading-architecture.png)
 
 ## 인프라
 
@@ -36,7 +36,7 @@ title: 알고리즘 트레이딩
 
 ### 그냥 생각난 리듬
 
-![리듬](/assets/images/idea/untitled-1.png)
+![리듬](/assets/images/idea/algo-trading-rhythm.png)
 
 ## 용어사전
 
