@@ -35,6 +35,6 @@ static/
 src/
   components/ # React 컴포넌트
   templates/  # 페이지 템플릿
-  pages/      # 정적 페이지 (notes, portfolio 등)
+  pages/      # 정적 페이지 (about, links, notes)
   styles/     # CSS
 ```
