@@ -592,6 +592,11 @@ img {
   color: #0a7a3a;
 }
 
+.search-result-type--page {
+  background: #fef3e8;
+  color: #c05e00;
+}
+
 .search-result-date {
   color: #888;
   font-size: 0.8125rem;

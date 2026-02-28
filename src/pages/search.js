@@ -81,7 +81,9 @@ const SearchPage = ({ data, location }) => {
         <ol className="search-results">
           {results.map(item => {
             const date = item.fields.date || item.frontmatter.date
-            const isNote = item.fields.sourceInstanceName === "notes"
+            const sourceInstance = item.fields.sourceInstanceName
+            const isNote = sourceInstance === "notes"
+            const isPage = sourceInstance === "pages"
 
             const categories = isNote
               ? (() => {
@@ -90,16 +92,21 @@ const SearchPage = ({ data, location }) => {
                 })()
               : item.fields.allCategories || []
 
+            const typeLabel = isNote ? "Note" : isPage ? "Link" : "Blog"
+            const typeClass = isNote
+              ? "search-result-type--note"
+              : isPage
+                ? "search-result-type--page"
+                : "search-result-type--post"
+
             return (
               <li key={item.fields.slug} className="search-result-item">
                 <Link to={item.fields.slug} className="search-result-title">
                   {item.frontmatter.title}
                 </Link>
                 <div className="search-result-meta">
-                  <span
-                    className={`search-result-type ${isNote ? "search-result-type--note" : "search-result-type--post"}`}
-                  >
-                    {isNote ? "Note" : "Post"}
+                  <span className={`search-result-type ${typeClass}`}>
+                    {typeLabel}
                   </span>
                   {date && (
                     <small className="search-result-date">{date}</small>
@@ -132,7 +139,7 @@ export const pageQuery = graphql`
   query SearchAll {
     allMarkdownRemark(
       filter: {
-        fields: { sourceInstanceName: { in: ["posts", "notes"] } }
+        fields: { sourceInstanceName: { in: ["posts", "notes", "pages"] } }
       }
       sort: { fields: { date: DESC } }
     ) {
