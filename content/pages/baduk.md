@@ -1,6 +1,6 @@
 ---
 title: "Baduk"
-type: portfolio
+type: project
 excerpt: "Baduk board game which can play by game record by myself developed by web technology."
 header:
   image: /assets/images/baduk/baduk-splash.png

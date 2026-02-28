@@ -3,24 +3,24 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 
-const PortfolioItemTemplate = ({ data }) => {
+const ProjectItemTemplate = ({ data }) => {
   const item = data.markdownRemark
 
   return (
     <Layout>
       <Seo title={item.frontmatter.title} />
-      <article className="portfolio-post">
+      <article className="project-post">
         <header className="post-header">
           {item.frontmatter.header?.image && (
             <img
               src={item.frontmatter.header.image}
               alt={item.frontmatter.title}
-              className="portfolio-header-image"
+              className="project-header-image"
             />
           )}
           <h1>{item.frontmatter.title}</h1>
           {item.frontmatter.excerpt && (
-            <p className="portfolio-excerpt">{item.frontmatter.excerpt}</p>
+            <p className="project-excerpt">{item.frontmatter.excerpt}</p>
           )}
         </header>
 
@@ -48,7 +48,7 @@ const PortfolioItemTemplate = ({ data }) => {
 }
 
 export const pageQuery = graphql`
-  query PortfolioItemById($id: String!) {
+  query ProjectItemById($id: String!) {
     markdownRemark(id: { eq: $id }) {
       html
       frontmatter {
@@ -67,4 +67,4 @@ export const pageQuery = graphql`
   }
 `
 
-export default PortfolioItemTemplate
+export default ProjectItemTemplate

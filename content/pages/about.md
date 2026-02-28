@@ -50,8 +50,17 @@ title: "About"
 
 학습 목적 혹은 개인 프로젝트로 만들었던 서비스와 앱들입니다.
 
-- [Baduk](/baduk/) - Baduk board game which can play by game record by myself developed by web technology.
-- [절친 월드컵](/worldcup/) - 컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임.
+- [Baduk](/project/baduk/) - Baduk board game which can play by game record by myself developed by web technology.
+- [절친 월드컵](/project/worldcup/) - 컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임.
+
+## 아이디어
+
+구체화되지 않았거나 아직 개발 중인 아이디어들입니다.
+
+- [미래예측 시나리오 파이프라인](/idea/future-prediction/) - LLM 기반 매일 미래 시나리오를 도출하고 평가·피드백하는 예측 파이프라인.
+- [부동산 정보 영상 플랫폼](/idea/realestate-platform/) - 텍스트 대신 영상으로 부동산 정보를 제공하는 플랫폼 아이디어.
+- [알고리즘 트레이딩](/idea/algo-trading/) - 거래량 랭커·외국인 매수 등 알고리즘 기반 주식·코인 자동매매 시스템 설계.
+- [코인 자동매매 랠리](/idea/crypto-trading/) - 코인 자동매매 시스템. CoDriver/Pacenote/RallyCar 구조로 등락률 기반 자동 매수/매도.
 
 ## Public Key
 

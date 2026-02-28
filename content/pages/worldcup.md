@@ -1,6 +1,6 @@
 ---
 title: "절친 월드컵"
-type: portfolio
+type: project
 excerpt: "컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임."
 header:
   image: /assets/images/worldcup/worldcup-splash.jpg
