@@ -19,7 +19,7 @@ category:
 
 Jekyll로 넘어가는 과정에서 MySQL DB에 있던 내용들을 모두 `.md` 파일로 변환하는 작업을 했습니다. 다행이 Wordpress를 Markdown으로 [변환해주는 툴](https://github.com/lonekorean/wordpress-export-to-markdown) 덕분에 쉽게 할 수 있었습니다. 그렇게 지금까지 사용했던 블로그 [https://gizrak.github.io/](https://gizrak.github.io/) 를 만들었습니다.
 
-![wordpress-export-to-markdown](/assets/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_1.png)
+![wordpress-export-to-markdown](/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_1.png)
 
 꽤 오랜기간 블로그라는걸 운영을 해왔지만 사실 한가지 근본적인 아쉬움은 있었습니다. 그냥 툴을 사용하는 입장에서 매뉴얼대로 설치하고 사용하는 것 뿐이었습니다. PHP와 Ruby가 전혀 어색한 언어는 아니었지만 굳이 깊이 파고들 만큼 열정이나 지식을 가지고 있지는 않았습니다. 쓰는 정도로만 충분했죠.
 
@@ -27,7 +27,7 @@ Jekyll로 넘어가는 과정에서 MySQL DB에 있던 내용들을 모두 `.md`
 
 그래서 최근에 눈여겨보던 플랫폼이 바로 [Gatsby](https://www.gatsbyjs.com/) 였습니다. 무엇보다 익숙한 자바스크립트 언어를 기반으로 했고, 리액트에서 파생된 CMS 플랫폼이었기 때문입니다. 공식 사이트에서 [gatsby-starter-blog](https://www.gatsbyjs.com/starters/gatsbyjs/gatsby-starter-blog) 를 제공해 주는데, 뭔가 책에서 나오는 샘플 예제 수준이라 이걸로 하기엔 좀 아쉬웠습니다.
 
-![gatsby-starter-blog](/assets/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_2.png)
+![gatsby-starter-blog](/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_2.png)
 
 ### 줌코딩 블로그 템플릿
 
@@ -39,7 +39,7 @@ Jekyll로 넘어가는 과정에서 MySQL DB에 있던 내용들을 모두 `.md`
 2. 공식 사이트 저장소를 Fork
    - 위 clone 방법과 동일한 이름의 내 저장소가 생성됨
    - 차이점은 `Fetch upstream`을 사용해서 필요할 때마다 업데이트를 받을 수 있음
-     ![Fetch upstream](/assets/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_3.png)
+     ![Fetch upstream](/images/posts/2022/03/20220308_2022-03-08-Jekyll에서-Gatsby-블로그_3.png)
 
 예전에 Jekyll 사용하면서 한가지 깨닫게 된 사실인데, 그냥 `clone`하면 upstream 저장소에 변경하상을 추적하기 힘들다는 단점이 있었습니다. 그래서 처음에 1번으로 했다가 2번으로 바꿔서 다시 한번 받았습니다. 그렇게 새롭게 블로그를 시작하게 되었네요.
 

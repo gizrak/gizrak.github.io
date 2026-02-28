@@ -3,7 +3,7 @@ title: "Baduk"
 type: project
 excerpt: "Baduk board game which can play by game record by myself developed by web technology."
 header:
-  image: /assets/images/projects/baduk/baduk-splash.png
+  image: /images/projects/baduk/baduk-splash.png
 ---
 
 **Baduk(Go)** is a popular board game that has long been loved in East Asia. Alpha-Go and Lee Se-dol's games attracted attention from all over the world. My father likes this game, but there weren't many ways to enjoy Baduk online than I decided to develop. So, this app has been implemented to play Baduk with the most accessible web.
@@ -22,8 +22,8 @@ The repository is <https://github.com/gizrak/baduk>.
 
 ## 스크린샷
 
-![Baduk image 1](/assets/images/projects/baduk/baduk-1.jpg)
+![Baduk image 1](/images/projects/baduk/baduk-1.jpg)
 
-![Baduk image 2](/assets/images/projects/baduk/baduk-2.jpg)
+![Baduk image 2](/images/projects/baduk/baduk-2.jpg)
 
-![Baduk image 3](/assets/images/projects/baduk/baduk-3.jpg)
+![Baduk image 3](/images/projects/baduk/baduk-3.jpg)

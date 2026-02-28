@@ -6,7 +6,7 @@ categories:
 
 미국 와우 홈페이지에 링크되어 있길래 퍼왔다. 국내랑은 다르게 블로그형으로 되어 있어서 꽤나 친숙한 인터페이스다. 특히나 좋은건 익플이 아닌 다른 브라우저에서도 깨지지 않고 잘 보인다는 것... ㅋ
 
-![](/assets/images/posts/2005/01/fk200000000060.jpg)
+![](/images/posts/2005/01/fk200000000060.jpg)
 
 ( 출처: <http://www.penny-arcade.com/view.php3?date=2004-12-31&res=l> )
 
