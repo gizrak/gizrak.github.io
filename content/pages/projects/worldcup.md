@@ -3,7 +3,7 @@ title: "절친 월드컵"
 type: project
 excerpt: "컴퓨터의 이미지 파일을 이용하여 즐기는 웹 기반 절친 찾기 월드컵 게임."
 header:
-  image: /assets/images/projects/worldcup/worldcup-splash.jpg
+  image: /images/projects/worldcup/worldcup-splash.jpg
 ---
 
 웹에서 자신의 이상형이나 친구들 사진을 가지고 재미있는 월드컵 게임을 즐길 수 있습니다.
@@ -25,9 +25,9 @@ header:
 
 ## 스크린샷
 
-![Worldcup image 1](/assets/images/projects/worldcup/worldcup-1.png)
+![Worldcup image 1](/images/projects/worldcup/worldcup-1.png)
 
-![Worldcup image 2](/assets/images/projects/worldcup/worldcup-2.png)
+![Worldcup image 2](/images/projects/worldcup/worldcup-2.png)
 
 ## 릴리즈 노트
 

@@ -27,7 +27,7 @@ const Bio = () => {
   return (
     <div className="bio">
       <img
-        src="/assets/images/ted-hwang.jpg"
+        src="/images/ted-hwang.jpg"
         alt={author.name}
         className="bio-avatar"
         width="50"

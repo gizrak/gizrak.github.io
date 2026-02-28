@@ -25,7 +25,7 @@ const Seo = ({ description, title, image, url, type, article, children }) => {
   const siteUrl = site.siteMetadata.siteUrl
   const canonicalUrl = url ? `${siteUrl}${url}` : null
   const ogType = type || `website`
-  const defaultImage = `${siteUrl}/assets/images/gizrak.jpg`
+  const defaultImage = `${siteUrl}/images/gizrak.jpg`
   const metaImage = image || defaultImage
 
   return (
