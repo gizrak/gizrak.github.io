@@ -74,7 +74,9 @@ category:
 
 ## 참고
 
+- [AI 무엇인가](https://hongong.hanbit.co.kr/ai-%EB%AC%B4%EC%97%87%EC%9D%B8%EA%B0%80-%EC%9D%B8%EA%B3%B5%EC%A7%80%EB%8A%A5-%EB%A8%B8%EC%8B%A0%EB%9F%AC%EB%8B%9D-%EB%94%A5%EB%9F%AC%EB%8B%9D-%EC%B0%A8%EC%9D%B4%EC%A0%90-%EC%B4%9D%EC%A0%95%EB%A6%AC/)
 - [딥 러닝과 머신 러닝의 비교](https://www.zendesk.kr/blog/machine-learning-and-deep-learning/)
 - [PyTorch로 시작하는 딥 러닝 입문](https://wikidocs.net/book/2788)
 - [딥러닝 알고리즘 종류별 이해하기](https://m.blog.naver.com/sundooedu/221211368089)
 - [딥러닝 분야별 SOTA 브라우저](https://paperswithcode.com/sota)
+- [퓨샷러닝/제로샷러닝/원샷러닝/트랜스포머](https://blog.naver.com/PostView.naver?blogId=dh0985&logNo=222321560055&parentCategoryNo=&categoryNo=11)
