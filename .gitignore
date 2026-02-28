@@ -37,3 +37,6 @@ out/
 
 # Secret files
 secret/
+
+# Temporary files
+tmp/
